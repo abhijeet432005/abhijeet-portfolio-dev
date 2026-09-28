@@ -12,3 +12,12 @@ body{background:var(--bg);color:var(--fg);font-family:var(--f-display),system-ui
 ::selection{background:var(--fg);color:var(--bg)}
 [data-theme=dark] .moon{display:none}
 :root:not([data-theme=dark]) .sun{display:none}
+
+
+html {
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, Safari */
+}
