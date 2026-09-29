@@ -8,8 +8,22 @@ export default function TransitionLink({ href, children, className, onClick }: {
     e.preventDefault();
     onClick?.();
     if (href === path) return;
-    gsap.set("#curtain-text", { opacity: 0 });
-    gsap.fromTo("#curtain", { yPercent: 100 }, { yPercent: 0, duration: 0.75, ease: "expo.inOut", onComplete: () => router.push(href) });
+    const tl = gsap.timeline();
+    tl.set("#curtain-word span", { yPercent: 120, opacity: 0 })
+      .to(".curtain-panel", {
+        yPercent: 0,
+        duration: 0.7,
+        ease: "expo.inOut",
+        stagger: 0.05,
+      }, 0)
+      .to("#curtain-word span", {
+        yPercent: 0,
+        opacity: 1,
+        duration: 0.5,
+        ease: "power3.out",
+        stagger: 0.02,
+      }, 0.25)
+      .call(() => router.push(href));
   };
   return <a href={href} onClick={go} className={className}>{children}</a>;
 }
