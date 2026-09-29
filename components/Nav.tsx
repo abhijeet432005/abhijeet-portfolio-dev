@@ -23,7 +23,13 @@ export default function Nav() {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-[70] flex items-center justify-between px-5 py-4 md:px-10">
-        <TransitionLink href="/" id="logo-anchor" onClick={() => setOpen(false)} className="font-semibold tracking-tight">{site.name}</TransitionLink>
+        <TransitionLink
+          href="/"
+          onClick={() => setOpen(false)}
+          className="font-semibold tracking-tight"
+        >
+          {site.name}
+        </TransitionLink>
         <nav className="hidden items-center rounded-full border border-line bg-card px-2 backdrop-blur md:flex">
           {site.nav.map((n) => (
             <TransitionLink key={n.href} href={n.href} className={link(n.href)}>
