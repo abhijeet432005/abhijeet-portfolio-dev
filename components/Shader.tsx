@@ -101,9 +101,33 @@ export default function Shader() {
       rippleT[slot] = u.t.value;
       slot = (slot + 1) % MAX_RIPPLES;
     };
-    const click = (e: PointerEvent) => {
+
+    // mouse/pen: ripple right on press, same as before
+    const downMouse = (e: PointerEvent) => {
+      if (e.pointerType === "touch") return;
       if ((e.target as HTMLElement)?.closest?.("[data-no-ripple]")) return;
       addRipple(e.clientX, e.clientY);
+    };
+
+    // touch: only ripple on a genuine tap — ignore scroll/drag gestures
+    let touchStart: { x: number; y: number; t: number } | null = null;
+    const downTouch = (e: PointerEvent) => {
+      if (e.pointerType !== "touch") return;
+      touchStart = { x: e.clientX, y: e.clientY, t: performance.now() };
+    };
+    const upTouch = (e: PointerEvent) => {
+      if (e.pointerType !== "touch" || !touchStart) return;
+      if ((e.target as HTMLElement)?.closest?.("[data-no-ripple]")) {
+        touchStart = null;
+        return;
+      }
+      const dist = Math.hypot(
+        e.clientX - touchStart.x,
+        e.clientY - touchStart.y,
+      );
+      const dt = performance.now() - touchStart.t;
+      if (dist < 12 && dt < 400) addRipple(e.clientX, e.clientY); // moved little, released quick = tap
+      touchStart = null;
     };
 
     const resize = () => {
@@ -111,7 +135,9 @@ export default function Shader() {
       u.res.value.set(innerWidth, innerHeight);
     };
     addEventListener("pointermove", move);
-    addEventListener("pointerdown", click);
+    addEventListener("pointerdown", downMouse);
+    addEventListener("pointerdown", downTouch);
+    addEventListener("pointerup", upTouch);
     addEventListener("resize", resize);
 
     let raf = 0;
@@ -128,7 +154,9 @@ export default function Shader() {
     return () => {
       cancelAnimationFrame(raf);
       removeEventListener("pointermove", move);
-      removeEventListener("pointerdown", click);
+      removeEventListener("pointerdown", downMouse);
+      removeEventListener("pointerdown", downTouch);
+      removeEventListener("pointerup", upTouch);
       removeEventListener("resize", resize);
       r.dispose();
       mat.dispose();
