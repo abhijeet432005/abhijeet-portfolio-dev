@@ -18,4 +18,5 @@ export const site = {
     { label: "GitHub", href: "https://github.com/abhijeet-kumar" },
     { label: "X / Twitter", href: "https://x.com/abhijeet-kumar" },
   ],
+  loadingWords: ["Frontend", "Backend", "AI Integration", "Agentic AI", "Deployed"],
 };

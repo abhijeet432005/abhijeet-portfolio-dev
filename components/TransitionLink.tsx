@@ -25,5 +25,5 @@ export default function TransitionLink({ href, children, className, onClick }: {
       }, 0.25)
       .call(() => router.push(href));
   };
-  return <a href={href} onClick={go} className={className}>{children}</a>;
+  return <a href={href}  onClick={go} className={className}>{children}</a>;
 }

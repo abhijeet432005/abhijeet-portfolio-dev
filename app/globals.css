@@ -21,3 +21,6 @@ html {
 html::-webkit-scrollbar {
   display: none; /* Chrome, Edge, Safari */
 }
+
+
+.tnum{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}

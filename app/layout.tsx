@@ -8,6 +8,7 @@ import Curtain from "@/components/Curtain";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { site } from "@/data/site";
+import Preloader from "@/components/Preloader";
 
 const display = Bricolage_Grotesque({ subsets: ["latin"], variable: "--f-display" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--f-mono" });
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </Smooth>
         <Cursor />
+        <Preloader />
         <Curtain />
       </body>
     </html>

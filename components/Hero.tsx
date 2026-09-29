@@ -7,13 +7,22 @@ import { home } from "@/data/home";
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { eyebrow, words, sub, cta } = home.hero;
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".w", { yPercent: 115, rotate: 4, duration: 1.3, ease: "expo.out", stagger: 0.07, delay: 1.0 });
-      gsap.from(".hf", { opacity: 0, y: 20, duration: 1, delay: 1.7, stagger: 0.1 });
-    }, ref);
-    return () => ctx.revert();
-  }, []);
+useEffect(() => {
+  const ctx = gsap.context(() => {
+    gsap.set(".w", { yPercent: 115, rotate: 4 });
+    gsap.set(".hf", { opacity: 0, y: 20 });
+
+    const play = () => {
+      gsap.to(".w", { yPercent: 0, rotate: 0, duration: 1.0, ease: "expo.out", stagger: 0.05 });
+      gsap.to(".hf", { opacity: 1, y: 0, duration: 0.8, delay: 0.15, stagger: 0.08 });
+    };
+
+    window.addEventListener("app:reveal", play, { once: true });
+    const fallback = setTimeout(play, 3500); // safety net if the event never fires
+    window.addEventListener("app:reveal", () => clearTimeout(fallback), { once: true });
+  }, ref);
+  return () => ctx.revert();
+}, []);
   return (
     <section ref={ref} className="flex min-h-svh flex-col justify-end px-5 pb-12 pt-32 md:px-10">
       <p className="hf mb-6 font-mono text-xs uppercase tracking-widest text-muted">{eyebrow}</p>
