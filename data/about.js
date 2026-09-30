@@ -10,13 +10,36 @@ export const about = {
     { value: "100%", label: "End‑to‑end ownership" },
   ],
   skills: [
-    { group: "Frontend", items: ["Next.js", "React", "Tailwind", "GSAP", "Framer Motion", "Three.js"] },
-    { group: "Backend", items: ["Node.js", "Python", "PostgreSQL", "MongoDB", "REST & GraphQL"] },
-    { group: "AI", items: ["OpenAI / Claude APIs", "RAG", "LangChain", "AI agents"] },
+    {
+      group: "Frontend",
+      items: [
+        "Next.js",
+        "React",
+        "Tailwind",
+        "GSAP",
+        "Framer Motion",
+      ],
+    },
+    {
+      group: "Backend",
+      items: ["Node.js", "PostgreSQL", "MongoDB", "REST & GraphQL"],
+    },
+    {
+      group: "AI",
+      items: ["OpenAI / Claude APIs", "RAG", "LangChain", "AI agents"],
+    },
     { group: "DevOps", items: ["Vercel", "AWS", "Docker", "GitHub Actions"] },
   ],
   timeline: [
-    { year: "2025 — Now", title: "Freelance Engineer", text: "Building websites, apps and AI systems for clients worldwide." },
-    { year: "2023 — 2025", title: "Role / Company", text: "Replace with your experience." },
+    {
+      year: "2025 — 2026",
+      title: "Frontend Developer · The Vyu",
+      text: "Built modern, responsive websites and digital experiences for brands and businesses.",
+    },
+    {
+      year: "2024 — Now",
+      title: "Freelancer · Self-Employed",
+      text: "Building websites and e-commerce experiences for brands, businesses and independent clients.",
+    },
   ],
 };

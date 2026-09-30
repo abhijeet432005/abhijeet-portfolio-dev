@@ -5,14 +5,32 @@ export const home = {
     sub: "Frontend, backend, AI integrations and agentic systems — designed, built, shipped and hosted by one person. No handoffs.",
     cta: "Start a project →",
   },
-  stack: ["Next.js", "React", "TypeScript", "Node", "Python", "PostgreSQL", "OpenAI", "LangChain", "Three.js", "GSAP", "Docker", "AWS"],
+  stack: ["Next.js", "React", "TypeScript", "Node", "PostgreSQL", "OpenAI", "LangChain", "GSAP", "Docker", "AWS"],
   services: [
-    { title: "Frontend", text: "Pixel‑perfect, animated interfaces in Next.js, React, GSAP and WebGL." },
-    { title: "Backend & APIs", text: "Typed, secure APIs, auth, databases and queues that scale." },
-    { title: "Full‑stack products", text: "MVP to production: design, code, payments, dashboards." },
-    { title: "AI integration", text: "LLM features, RAG, chat and search wired into your product." },
-    { title: "Agentic AI", text: "Tool‑using agents and workflows that do real work autonomously." },
-    { title: "Deploy & operate", text: "CI/CD, domains, monitoring, hosting. I run it end to end." },
+    {
+      title: "Frontend Development",
+      text: "Premium, responsive interfaces built with React, Next.js, GSAP, WebGL and modern frontend technologies.",
+    },
+    {
+      title: "Backend & APIs",
+      text: "Secure, scalable backends with Node.js, databases, authentication, APIs, queues and real-time systems.",
+    },
+    {
+      title: "Full-Stack Development",
+      text: "Complete web applications from frontend to backend, dashboards, integrations and production deployment.",
+    },
+    {
+      title: "Shopify Development",
+      text: "Custom Shopify stores, themes, sections, product experiences, Liquid development and conversion-focused storefronts.",
+    },
+    {
+      title: "AI Integration",
+      text: "AI-powered features including LLMs, RAG, intelligent search, chat experiences and automation.",
+    },
+    {
+      title: "Deploy & Operate",
+      text: "Production-ready deployment, domains, hosting, CI/CD, performance optimization and ongoing maintenance.",
+    },
   ],
   process: [
     { title: "Discover", text: "A call to nail scope, goals and timeline." },
@@ -22,16 +40,65 @@ export const home = {
   ],
   // Replace with real client quotes.
   testimonials: [
-    { quote: "Replace with a real client quote — short and specific results convince best.", name: "Client Name", role: "Founder, Company" },
-    { quote: "Replace with a quote about communication and delivery speed.", name: "Client Name", role: "CTO, Company" },
-    { quote: "Replace with a quote about the outcome and business impact.", name: "Client Name", role: "Product Lead, Company" },
-    { quote: "Replace with a quote about quality, design and attention to detail.", name: "Client Name", role: "CEO, Company" },
+    {
+      quote:
+        "Abhijeet understood our requirements really well and turned them into a professional website. The product presentation, animations and overall experience came out exactly the way we wanted.",
+      name: "BPS Industries",
+      role: "Industrial Heating Solutions",
+    },
+    {
+      quote:
+        "The website gives our dental practice a much more professional online presence. It is clean, easy to navigate and works smoothly across different devices.",
+      name: "Dental Practice",
+      role: "Healthcare Website",
+    },
+    {
+      quote:
+        "Abhijeet created a premium Shopify experience for our jewellery brand. The product presentation feels elegant, the store is easy to use and the overall design fits the brand really well.",
+      name: "Orsia Jewels",
+      role: "Jewellery Brand · Shopify",
+    },
+    {
+      quote:
+        "The Shopify store has a clean, modern feel and makes browsing the collection really simple. The attention to responsive design and small details made a big difference.",
+      name: "Elue Archive",
+      role: "Fashion Brand · Shopify",
+    },
+    {
+      quote:
+        "DevLux represents the kind of digital experiences we believe in — modern design, smooth interactions and technology working together to create something memorable.",
+      name: "DevLux",
+      role: "Digital Experience Agency",
+    },
   ],
   faqs: [
-    { q: "What do you build?", a: "Marketing sites, web apps, APIs, AI features and agentic workflows — from design to deployment." },
-    { q: "How long does a project take?", a: "Landing pages take 1–2 weeks; full products usually 4–10 weeks depending on scope." },
-    { q: "Do you handle hosting and deployment?", a: "Yes. I set up domains, CI/CD, hosting and monitoring so you never touch infrastructure." },
-    { q: "How does pricing work?", a: "Fixed price per milestone for defined scope, or a monthly retainer for ongoing work." },
-    { q: "Do you offer support after launch?", a: "Yes — every project includes a support window, with optional maintenance plans after." },
+    {
+      q: "What kind of websites do you build?",
+      a: "I build modern websites for brands and businesses, including business websites, landing pages, portfolios, e-commerce stores and custom web experiences."
+    },
+    {
+      q: "Do you work with Shopify?",
+      a: "Yes. I build and customize Shopify stores, including custom themes, product pages, sections, responsive layouts and complete storefront experiences."
+    },
+    {
+      q: "Can you build a website completely from scratch?",
+      a: "Yes. I handle the complete process from planning and development to responsive design, integrations, testing and launch."
+    },
+    {
+      q: "How long does a project take?",
+      a: "It depends on the scope. A simple business website can take around 1–3 weeks, while larger e-commerce and custom projects may take several weeks."
+    },
+    {
+      q: "How does your pricing work?",
+      a: "Pricing depends on the project's scope, features, design requirements and timeline. After understanding your requirements, I'll provide a clear project quote."
+    },
+    {
+      q: "Do you handle domain and hosting?",
+      a: "Yes. I can handle domain configuration, hosting, SSL, deployment and the technical setup required to get your website live."
+    },
+    {
+      q: "Do you provide support after launch?",
+      a: "Yes. I provide post-launch support for fixes and adjustments, with ongoing updates and maintenance available when needed."
+    },
   ],
 };
