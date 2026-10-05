@@ -40,7 +40,7 @@ export default function ProjectList({ limit }: { limit?: number }) {
       {projects.slice(0, limit).map((p, i) => (
         <a
           key={p.title}
-          href={p.live}
+          href={p.live || p.github}
           target="_blank"
           rel="noopener noreferrer"
           data-cursor
@@ -53,7 +53,7 @@ export default function ProjectList({ limit }: { limit?: number }) {
             <br />
             <span className="font-mono text-xs">{p.tags.join(" · ")} · {p.year}</span>
           </p>
-          <span className="font-mono text-sm md:col-span-2 md:text-right">Live site ↗</span>
+          <span className="font-mono text-sm md:col-span-2 md:text-right">{p.live ? "Live site ↗" : "Github ↗"}</span>
         </a>
       ))}
       <div className="border-t border-line" />

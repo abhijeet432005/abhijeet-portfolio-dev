@@ -1,26 +1,101 @@
 @import "tailwindcss";
-:root{--bg:#f5f3ee;--fg:#111;--muted:#6b6b6b;--line:rgba(0,0,0,.14);--card:rgba(255,255,255,.55)}
-[data-theme=dark]{--bg:#08080a;--fg:#f2f0ea;--muted:#8d8d94;--line:rgba(255,255,255,.14);--card:rgba(20,20,26,.5)}
-@theme inline{--color-bg:var(--bg);--color-fg:var(--fg);--color-muted:var(--muted);--color-line:var(--line);--color-card:var(--card);--font-display:var(--f-display);--font-mono:var(--f-mono)}
-html.lenis,html.lenis body{height:auto}
-.lenis.lenis-smooth{scroll-behavior:auto!important}
-body{background:var(--bg);color:var(--fg);font-family:var(--f-display),system-ui,sans-serif;overflow-x:hidden}
-::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
-::view-transition-new(root){z-index:2}
-@media(pointer:fine){body,a,button,input,textarea,select{cursor:none}}
-@keyframes marquee{to{transform:translateX(-50%)}}
-::selection{background:var(--fg);color:var(--bg)}
-[data-theme=dark] .moon{display:none}
-:root:not([data-theme=dark]) .sun{display:none}
+
+:root {
+  --bg: #f5f3ee;
+  --fg: #111;
+  --muted: #6b6b6b;
+  --line: rgba(0, 0, 0, .14);
+  --card: rgba(255, 255, 255, .55)
+}
+
+[data-theme=dark] {
+  --bg: #08080a;
+  --fg: #f2f0ea;
+  --muted: #8d8d94;
+  --line: rgba(255, 255, 255, .14);
+  --card: rgba(20, 20, 26, .5)
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-card: var(--card);
+  --font-display: var(--f-display);
+  --font-mono: var(--f-mono)
+}
+
+html.lenis,
+html.lenis body {
+  height: auto
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--f-display), system-ui, sans-serif;
+  overflow-x: hidden
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal
+}
+
+::view-transition-new(root) {
+  z-index: 2
+}
+
+@media(pointer:fine) {
+
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    cursor: none
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%)
+  }
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg)
+}
+
+[data-theme=dark] .moon {
+  display: none
+}
+
+:root:not([data-theme=dark]) .sun {
+  display: none
+}
 
 
 html {
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 html::-webkit-scrollbar {
-  display: none; /* Chrome, Edge, Safari */
+  display: none;
+  /* Chrome, Edge, Safari */
 }
 
 
-.tnum{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum"
+}

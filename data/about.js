@@ -5,7 +5,7 @@ export const about = {
     "I care about motion, performance and clean code equally — and I stay with a project until it's live and working for your users.",
   ],
   stats: [
-    { value: "3+", label: "Years building" },
+    { value: "2+", label: "Years building" },
     { value: "20+", label: "Projects shipped" },
     { value: "100%", label: "End‑to‑end ownership" },
   ],
