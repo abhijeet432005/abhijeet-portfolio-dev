@@ -2,7 +2,7 @@
 export const site = {
   name: "Abhijeet Kumar",
   handle: "abhijeet-kumar",
-  role: "Freelance Full‑Stack & AI Engineer",
+  role: "Full‑Stack & AI Engineer",
   email: "abhijeet44kumar@gmail.com",
   phone: "+91 9873601547",
   city: "New Delhi, India",
