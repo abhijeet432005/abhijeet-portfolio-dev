@@ -15,18 +15,11 @@ export const projects = [
     live: "https://mern-c9dy.onrender.com/",
   },
   {
-    title: "DevLux",
-    text: "Creative agency website designed to showcase premium web experiences, development services and digital solutions.",
-    tags: ["React", "GSAP", "SCSS"],
+    title: "Orsia Jewels",
+    text: "Premium jewelry e-commerce store built on Shopify with a refined storefront, responsive design and seamless shopping experience.",
+    tags: ["Shopify", "Liquid", "JavaScript"],
     year: "2026",
-    live: "https://example.com",
-  },
-  {
-    title: "YouTube Web",
-    text: "Frontend-focused YouTube experience built with React and the YouTube API for browsing and discovering video content.",
-    tags: ["React", "YouTube API", "JavaScript"],
-    year: "2025",
-    live: "https://youtube-web-site.vercel.app/",
+    live: "https://orsiajewels.com/",
   },
   {
     title: "Shopcart",
@@ -34,6 +27,13 @@ export const projects = [
     tags: ["Node.js", "Express", "MongoDB", "Docker", "Microservices"],
     year: "2026",
     github: "https://github.com/abhijeet432005/ecommerce-micro-service",
+  },
+  {
+    title: "YouTube Web",
+    text: "Frontend-focused YouTube experience built with React and the YouTube API for browsing and discovering video content.",
+    tags: ["React", "YouTube API", "JavaScript"],
+    year: "2025",
+    live: "https://youtube-web-site.vercel.app/",
   },
   {
     title: "Aapki Dukkan",
