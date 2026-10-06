@@ -29,6 +29,13 @@ export const projects = [
     github: "https://github.com/abhijeet432005/ecommerce-micro-service",
   },
   {
+    title: "Ramayana",
+    text: "Interactive digital experience inspired by the Ramayana, designed with immersive visuals and a storytelling-focused interface.",
+    tags: ["Web Development", "UI/UX"],
+    year: "2025",
+    live: "https://ramayan.vercel.app/",
+  },
+  {
     title: "YouTube Web",
     text: "Frontend-focused YouTube experience built with React and the YouTube API for browsing and discovering video content.",
     tags: ["React", "YouTube API", "JavaScript"],
