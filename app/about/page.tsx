@@ -1,5 +1,13 @@
 import Cta from "@/components/Cta";
 import { about } from "@/data/about";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Meet Abhijeet Kumar, a New Delhi-based freelance full-stack developer building responsive websites, e-commerce experiences, and production-ready web apps.",
+  alternates: { canonical: "/about" },
+};
 
 export default function About() {
   return (<>

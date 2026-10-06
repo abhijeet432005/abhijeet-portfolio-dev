@@ -6,6 +6,10 @@ import Cta from "@/components/Cta";
 import TransitionLink from "@/components/TransitionLink";
 import { home } from "@/data/home";
 
+export const metadata = {
+  alternates: { canonical: "/" },
+};
+
 const h2 = "text-5xl font-semibold tracking-tighter md:text-7xl";
 export default function Home() {
   const { stack, services, process, testimonials, faqs } = home;
@@ -17,7 +21,7 @@ export default function Home() {
       </div>
     </div>
     <section className="px-5 py-32 md:px-10">
-      <h2 data-reveal className={`mb-16 ${h2}`}>Services</h2>
+      <h2 data-reveal className={`mb-16 ${h2}`}>Freelance web development services</h2>
       <div className="grid gap-px overflow-hidden rounded-3xl border border-line bg-line md:grid-cols-2 lg:grid-cols-3">
         {services.map((s, i) => (
           <div key={s.title} data-reveal data-cursor className="bg-bg/70 p-8 backdrop-blur transition-colors hover:bg-fg hover:text-bg md:p-10">

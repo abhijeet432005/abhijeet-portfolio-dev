@@ -128,7 +128,10 @@ This Next.js app can be deployed to Vercel or another platform that supports Nex
 1. Push the repository to your Git provider and import it into the hosting platform.
 2. Use the standard Next.js build command, `npm run build`.
 3. Add `NEXT_PUBLIC_WEB3FORMS_KEY` to the deployment environment if the contact form should accept submissions.
-4. Redeploy after adding or changing the environment variable.
-5. Set the production domain and verify the metadata, social links, project URLs, and a real form submission.
+4. Set `NEXT_PUBLIC_SITE_URL` to the canonical production origin (currently `https://abhijeet-tech.vercel.app`). When moving to a custom domain, update this value to the final HTTPS origin, configure the old Vercel URL to redirect to it, and redeploy.
+5. Add the production domain to Google Search Console, verify ownership, and submit `https://your-domain/sitemap.xml`. Request indexing for the important pages after checking their live URL inspection results.
+6. Verify the metadata, canonical URLs, social preview, social links, project URLs, and a real form submission after deployment.
 
 No database or application server credentials are required by the current project.
+
+The app generates page-specific titles and descriptions, structured data for the portfolio owner and website, a social sharing image, and crawlable `robots.txt` and `sitemap.xml` routes. Search rankings depend on many factors beyond on-page setup, including useful original content, links, competition, and indexing; metadata alone cannot guarantee a position.

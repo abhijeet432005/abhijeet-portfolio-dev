@@ -1,5 +1,13 @@
 import ProjectList from "@/components/ProjectList";
 import Cta from "@/components/Cta";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Web Development Projects",
+  description:
+    "Explore web development projects by Abhijeet Kumar, including business websites, Shopify stores, AI experiences, and full-stack applications.",
+  alternates: { canonical: "/work" },
+};
 
 export default function Work() {
   return (<>

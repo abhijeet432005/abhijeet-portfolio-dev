@@ -1,6 +1,14 @@
 import ContactForm from "@/components/ContactForm";
 import { contact } from "@/data/contact";
 import { site } from "@/data/site";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hire a Freelance Web Developer",
+  description:
+    "Have a website, Shopify store, backend, or AI project in mind? Contact Abhijeet Kumar, a freelance web developer in New Delhi, India.",
+  alternates: { canonical: "/contact" },
+};
 
 export default function Contact() {
   return (

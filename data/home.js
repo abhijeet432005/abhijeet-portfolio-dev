@@ -1,6 +1,6 @@
 export const home = {
   hero: {
-    eyebrow: "Freelance · Full‑stack · AI · Deployed end‑to‑end",
+    eyebrow: "Abhijeet Kumar · Freelance Web Developer · New Delhi, India",
     words: ["I", "build", "websites", "that", "feel", "alive."],
     sub: "Frontend, backend, AI integrations and agentic systems — designed, built, shipped and hosted by one person. No handoffs.",
     cta: "Start a project →",
